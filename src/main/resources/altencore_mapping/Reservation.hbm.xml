@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.alten.altencore.model.Reservation" table="RESERVATION">
+        <composite-id class="com.alten.altencore.model.id.ReservationId" name="id">
+            <key-property column="TAKEN_DATE" name="takenDate" type="date"/>
+            <key-property column="CODE" name="code" type="string"/>
+        </composite-id>
+        <property column="USERNAME" name="username" type="string"/>
+    </class>
+</hibernate-mapping>
